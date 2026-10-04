@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Salle - V1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Plan du Restaurant</h1>
+
+<div class="restaurant">
+    <!-- Les 5 zones -->
+    <div class="aile" id="aile-principale">
+        <h2>Aile Principale</h2>
+        <div class="grille-tables" id="grille-principale"></div>
+    </div>
+
+    <div class="aile" id="terrasse">
+        <h2>Terrasse</h2>
+        <div class="grille-tables" id="grille-terrasse"></div>
+    </div>
+
+    <div class="aile" id="secondaire-1">
+        <h2>Secondaire 1</h2>
+        <div class="grille-tables" id="grille-secondaire-1"></div>
+    </div>
+
+    <div class="aile" id="secondaire-2">
+        <h2>Secondaire 2</h2>
+        <div class="grille-tables" id="grille-secondaire-2"></div>
+    </div>
+
+    <div class="aile" id="etage-1">
+        <h2>1er Étage</h2>
+        <div class="grille-tables" id="grille-etage-1"></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modale">
+    <div class="modal-content">
+        <span class="fermer-modal" onclick="fermerModale()">&times;</span>
+        <h3 id="modale-titre">Table X</h3>
+        <p>Modifier le statut :</p>
+
+        <button class="btn-action libre" onclick="changerStatut('LIBRE')">Marquer Libre</button>
+        <button class="btn-action occupee" onclick="changerStatut('OCCUPEE')">Marquer Occupée</button>
+        <!-- Le nouveau bouton Réservée -->
+        <button class="btn-action reservee" onclick="changerStatut('RESERVEE')">Marquer Réservée</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
